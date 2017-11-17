@@ -37,7 +37,7 @@ public class JEzCSV {
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
-        System.out.println("File : "+ dirFile +  "Parser");
+        System.out.println("File : "+ dirFile +  " Parser");
         return l_infoCSV;
     }
 
