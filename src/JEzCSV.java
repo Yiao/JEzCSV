@@ -4,6 +4,11 @@ import java.util.Scanner;
 
 public class JEzCSV {
 
+    /**
+     * @param dirFile is the directoy file complete (ex. "C:\\JEzCSV\\test.csv")
+     * @param delimiter is the delimiter which you want to use in your
+     * @return  It will return a list of type (ArrayList<ArrayList<String>>)
+     */
     public ArrayList<ArrayList<String>> Parser(String dirFile, String delimiter) {
         Scanner lineScanner = null;
         Scanner columnScanner = null;
@@ -35,6 +40,11 @@ public class JEzCSV {
     }
 
 
+    /**
+     * @param dirFile  is the directoy file complete (ex. "C:\\JEzCSV\\test.csv")
+     * @param delimiter is the delimiter which you want to use in your
+     * @param l_l_Informations is the information which you want to write into a file csv
+     */
     public void Create(String dirFile,String delimiter,ArrayList<ArrayList<String>> l_l_Informations) {
         BufferedWriter bufWriter = null;
         FileWriter fileWriter = null;
