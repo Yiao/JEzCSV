@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class JEzCSV {
 
-    public ArrayList<ArrayList<String>> Parser(String dirFile, String delimiter, boolean saveHeader) {
+    public ArrayList<ArrayList<String>> Parser(String dirFile, String delimiter) {
         Scanner lineScanner = null;
         Scanner columnScanner = null;
         //ArrayList content information of file CSV
