@@ -16,7 +16,8 @@ How to use it in your project :
          
          
          
-    2. Exemple for create a file CSV (If I have put informations to a ArrayList<ArrayList<String>> listInfomation and want to create a file csv named "MyFile" and with dimiliter ";"):
+    2. Exemple for create a file CSV (If I have put informations to a ArrayList<ArrayList<String>> listInfomation,
+       I want to create a file csv named "MyFile" and with dimiliter ";"):
     
          JEzCSV jEzCSV = new JEzCSV();
          
