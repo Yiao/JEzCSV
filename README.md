@@ -16,6 +16,7 @@ How to use it in your project :
          
          
          
+         
     2. Exemple for create a file CSV (If I have put informations to a ArrayList<ArrayList<String>> listInfomation,
        I want to create a file csv named "MyFile" and with dimiliter ";"):
     
@@ -36,5 +37,10 @@ Structure JEzCSV
    
 
     Parser : Parser file and return a ArrayList<ArrayList<String>> list
+    
     Create  : Create a file csv and write informations type ArrayList<ArrayList<String>>
+    
     directoryFile : is the directoy file complete (ex. C:\JEzCSV\test.csv)
+    
+    ArrayList<ArrayList<String>> listInfomation :
+    
