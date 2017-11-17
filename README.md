@@ -42,5 +42,5 @@ Structure JEzCSV
     
     directoryFile : is the directoy file complete (ex. C:\JEzCSV\test.csv)
     
-    ArrayList<ArrayList<String>> listInfomation :
-    
+
+    
