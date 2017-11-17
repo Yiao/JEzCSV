@@ -2,9 +2,7 @@
   <artifact type="jar" name="JEzCSV">
     <output-path>$PROJECT_DIR$/out/artifacts/JEzCSV</output-path>
     <root id="archive" name="JEzCSV.jar">
-      <element id="directory" name="META-INF">
-        <element id="file-copy" path="$PROJECT_DIR$/META-INF/MANIFEST.MF" />
-      </element>
+      <element id="module-output" name="JEzCSV" />
     </root>
   </artifact>
 </component>
