@@ -42,7 +42,7 @@ Structure JEzCSV
     
     Create  : Create a file csv and write informations type ArrayList<ArrayList<String>>
     
-    directoryFile : is the directoy file complete (ex. C:\JEzCSV\test.csv)
+    directoryFile : is the directoy file complete (ex. "C:\\JEzCSV\\test.csv")
     
 
     
