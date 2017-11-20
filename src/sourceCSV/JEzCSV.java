@@ -75,18 +75,18 @@ public class JEzCSV {
      * @param oldDelimiter delimiter of the old file
      * @param newDelimiter new delimiter
      */
-    public void ChangeDilimiter(String oldDirFile, String newDirFile, String oldDelimiter, String newDelimiter){
+    public void ChangeDelimiter(String oldDirFile, String newDirFile, String oldDelimiter, String newDelimiter){
         Create(newDirFile,newDelimiter, Parser(oldDirFile,oldDelimiter));
     }
 
 
     /**
-     * @param repertory repertory
+     * @param directory repertory
      * @param delimiter delimiter of the file
      * @param hasHeader if the file has header
      */
-    public void MergeCSV(String repertory,String delimiter,boolean hasHeader){
-        String[] dir = new java.io.File(repertory).list( );
+    public void MergeCSV(String directory,String delimiter,boolean hasHeader){
+        String[] dir = new java.io.File(directory).list( );
 
         ArrayList<ArrayList<String>> l_l_informationTotal = new ArrayList<>();
 
@@ -95,7 +95,7 @@ public class JEzCSV {
             String nomFichier = "";
             nomFichier = dir[i];
             String sousDir = "";
-            sousDir = repertory+"\\"+ nomFichier;
+            sousDir = directory+"\\"+ nomFichier;
 
             if (hasHeader) {
                 if (i==0) {
@@ -111,7 +111,7 @@ public class JEzCSV {
             }
 
         }
-        Create(repertory+"//Result.csv", delimiter, l_l_informationTotal);
+        Create(directory+"//Result.csv", delimiter, l_l_informationTotal);
     }
 
 }
