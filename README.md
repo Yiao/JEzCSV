@@ -28,6 +28,31 @@ How to use it in your project :
          
          You can find your file CSV in C:\JEzCSV
          
+         
+    3. Exemple for changing the delimiter of a CSV file :
+    
+         JEzCSV jEzCSV = new JEzCSV();
+         
+         jEzCSV.ChangeDelimiter("C:\\JEzCSV\\MyFile.csv","C:\\JEzCSV\\New_MyFile.csv",",",";");
+         
+         Then you can find the new CSV file with ";" named "New_MyFile" in the "C:\\JezCSV"
+         
+    4. Exemple to use MergeCSV :
+    
+        a. I will put all the CSV files in a directory which named ("C:\\JEzCSV\\AllFileCSV")
+           All my file CSV used "," like delimiter and each one has the header
+           
+        b. I will call my function like this in my code :
+        
+            JEzCSV jEzCSV = new JEzCSV();
+         
+            jEzCSV.MergeCSV("C:\\JEzCSV\\AllFileCSV",",",true);
+            
+            
+            You could fin a file named "Result" in the directory "C:\\JEzCSV\\AllFileCSV"
+            
+            
+            
 Structure JEzCSV
 
     JEzCSV
@@ -35,6 +60,10 @@ Structure JEzCSV
     ----- ArrayList<ArrayList<String>> Parser(String directoryFile,String demiliter)
     |
     ----- void Create (String directoryFile,String demiliter,ArrayList<ArrayList<String>> l_l_informations)
+    |
+    ----- void ChangeDilimiter(String oldDirFile, String newDirFile, String oldDelimiter, String newDelimiter)
+    |
+    ----- void MergeFile (String directory,String delimiter,boolean hasHeader)
     
    
 
@@ -43,6 +72,8 @@ Structure JEzCSV
     Create  : Create a file csv and write informations type ArrayList<ArrayList<String>>
     
     directoryFile : is the directoy file complete (ex. "C:\\JEzCSV\\test.csv")
+    
+    directory : is the directory you put all yours CSV file that you want to merge together (ex. "C:\\JezCSV\\AllCSVFile")
     
 
     
