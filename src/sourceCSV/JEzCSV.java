@@ -68,4 +68,50 @@ public class JEzCSV {
             System.out.println("Write error : " + e.getMessage());
         }
     }
+
+    /**
+     * @param oldDirFile old file repertory
+     * @param newDirFile new file repertory
+     * @param oldDelimiter delimiter of the old file
+     * @param newDelimiter new delimiter
+     */
+    public void ChangeDilimiter(String oldDirFile, String newDirFile, String oldDelimiter, String newDelimiter){
+        Create(newDirFile,newDelimiter, Parser(oldDirFile,oldDelimiter));
+    }
+
+
+    /**
+     * @param repertory repertory
+     * @param delimiter delimiter of the file
+     * @param hasHeader if the file has header
+     */
+    public void MergerCSV(String repertory,String delimiter,boolean hasHeader){
+        String[] dir = new java.io.File(repertory).list( );
+
+        ArrayList<ArrayList<String>> l_l_informationTotal = new ArrayList<>();
+
+        for (int i=0; i<dir.length; i++)
+        {
+            String nomFichier = "";
+            nomFichier = dir[i];
+            String sousDir = "";
+            sousDir = repertory+"\\"+ nomFichier;
+
+            if (hasHeader) {
+                if (i==0) {
+                    l_l_informationTotal.addAll(Parser(sousDir, delimiter));
+                } else {
+                    ArrayList<ArrayList<String>> tmpList = new ArrayList<>();
+                    tmpList = Parser(sousDir, delimiter);
+                    tmpList.remove(0);
+                    l_l_informationTotal.addAll(tmpList);
+                }
+            } else {
+                l_l_informationTotal.addAll(Parser(sousDir, delimiter));
+            }
+
+        }
+        Create(repertory+"//Result.csv", delimiter, l_l_informationTotal);
+    }
+
 }
