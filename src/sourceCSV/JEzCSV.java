@@ -85,7 +85,7 @@ public class JEzCSV {
      * @param delimiter delimiter of the file
      * @param hasHeader if the file has header
      */
-    public void MergerCSV(String repertory,String delimiter,boolean hasHeader){
+    public void MergeCSV(String repertory,String delimiter,boolean hasHeader){
         String[] dir = new java.io.File(repertory).list( );
 
         ArrayList<ArrayList<String>> l_l_informationTotal = new ArrayList<>();
