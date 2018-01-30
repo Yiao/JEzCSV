@@ -17,8 +17,6 @@ How to use it in your project :
          l_l_informations = jEzCSV.Parser("C:\\JEzCSV\\test.csv",",");
          
          
-         
-         
     2. Exemple for create a file CSV (If I have put informations to a ArrayList<ArrayList<String>> listInfomation,
        I want to create a file csv named "MyFile" and with dimiliter ";"):
     
@@ -37,6 +35,7 @@ How to use it in your project :
          
          Then you can find the new CSV file with ";" named "New_MyFile" in the "C:\\JezCSV"
          
+         
     4. Exemple to use MergeCSV :
     
         a. I will put all the CSV files in a directory which named ("C:\\JEzCSV\\AllFileCSV")
@@ -47,7 +46,6 @@ How to use it in your project :
             JEzCSV jEzCSV = new JEzCSV();
          
             jEzCSV.MergeCSV("C:\\JEzCSV\\AllFileCSV",",",true);
-            
             
             You could fin a file named "Result" in the directory "C:\\JEzCSV\\AllFileCSV"
             
